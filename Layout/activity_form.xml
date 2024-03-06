@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormActivity"
+    android:background="@color/yellow">
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Form Input Data"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/inputNama"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nama"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:text="Nama"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/inputNama"
+        app:layout_constraintTop_toBottomOf="@+id/judul"
+        app:layout_constraintBottom_toTopOf="@+id/email"/>
+
+    <EditText
+        android:id="@+id/inputNama"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Masukkan Nama"
+        android:background="@drawable/text_border"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/nama"
+        app:layout_constraintTop_toBottomOf="@+id/judul"
+        app:layout_constraintBottom_toTopOf="@+id/inputEmail"/>
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintRight_toLeftOf="@+id/inputEmail"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nama"
+        app:layout_constraintBottom_toTopOf="@+id/jenisKelamin"/>
+
+    <EditText
+        android:id="@+id/inputEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="Masukkan Email"
+        android:background="@drawable/text_border"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintLeft_toRightOf="@+id/email"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputNama"
+        app:layout_constraintBottom_toTopOf="@+id/inputJK"/>
+
+    <TextView
+        android:id="@+id/jenisKelamin"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:text="Jenis Kelamin"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintRight_toLeftOf="@+id/inputJK"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintBottom_toTopOf="@id/umur"/>
+
+    <EditText
+        android:id="@+id/inputJK"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Masukkan Jenis Kelamin"
+        android:background="@drawable/text_border"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/jenisKelamin"
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail"
+        app:layout_constraintBottom_toTopOf="@+id/inputUmur"/>
+
+    <TextView
+        android:id="@+id/umur"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:text="Umur"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintRight_toLeftOf="@+id/inputUmur"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jenisKelamin"
+        app:layout_constraintBottom_toTopOf="@id/alamat"/>
+
+    <EditText
+        android:id="@+id/inputUmur"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Masukkan Umur"
+        android:background="@drawable/text_border"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/umur"
+        app:layout_constraintTop_toBottomOf="@+id/inputJK"
+        app:layout_constraintBottom_toTopOf="@+id/inputAlamat"/>
+
+    <TextView
+        android:id="@+id/alamat"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:text="Alamat"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintRight_toLeftOf="@+id/inputAlamat"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/umur"
+        app:layout_constraintBottom_toTopOf="@id/buttonSubmit"/>
+
+    <EditText
+        android:id="@+id/inputAlamat"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Masukkan Alamat"
+        android:background="@drawable/text_border"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/alamat"
+        app:layout_constraintTop_toBottomOf="@+id/inputUmur"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSubmit"/>
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="submit"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputAlamat" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
